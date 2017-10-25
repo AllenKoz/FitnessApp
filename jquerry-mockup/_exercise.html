@@ -74,8 +74,12 @@
     	for (i = 0; i < coffee.length; i++) {
         	if (coffee[i].checked) {
             	txt = txt + coffee[i].value + " ";
-				document.getElementById("checkbox").disabled = true;
+				
         	}
+			if (inputs[i].type === "checkbox" && inputs[i].checked) {
+      			arr.push(inputs[i].value);
+				  document.getElementById("checkbox").disabled = true;
+   			}
 
 
     	}
