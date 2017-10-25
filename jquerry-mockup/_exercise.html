@@ -28,12 +28,12 @@
 										Choose which exercises you have done
 									</div>
 									<form action="/action_page.php">
-										<input type="checkbox" name="coffee" value="Jumping Jacks">Jumping Jacks<br>
-										<input type="checkbox" name="coffee" value="Running">Running<br>
-										<input type="checkbox" name="coffee" value="Weight Lifting">Weight Lifting<br>
-										<input type="checkbox" name="coffee" value="Squat">Squat<br>
+										<input type="checkbox" name="coffee" value="Jumping Jacks" id="checkbox">Jumping Jacks<br>
+										<input type="checkbox" name="coffee" value="Running" id="checkbox">Running<br>
+										<input type="checkbox" name="coffee" value="Weight Lifting" id="checkbox">Weight Lifting<br>
+										<input type="checkbox" name="coffee" value="Squat" id="checkbox">Squat<br>
 										<br>
-										<input type="button" onclick="makeCheckBox()" value="Send order">
+										<input type="button" onclick="makeCheckbox()" value="Send order">
 										<br><br>
 										<input type="text" id="order" size="50">
 										<input type="submit" value="Submit">
@@ -74,15 +74,23 @@
     	for (i = 0; i < coffee.length; i++) {
         	if (coffee[i].checked) {
             	txt = txt + coffee[i].value + " ";
+				document.getElementById("checkbox").disabled = true;
         	}
+
+
     	}
     	document.getElementById("order").value = "You did these exercises: " + txt;
+
+		
+	}
+function disable() {
+    document.getElementById("checkbox").disabled = true;
+	}
+
+	function undisable() {
+    	document.getElementById("checkbox").disabled = false;
 	}
 </script>
-<script>
-	function disableCheckbox() {
-		document.getElementById("myCheck").disabled = true;
-	}
-	</script>
+
 	</body>
 </html>
