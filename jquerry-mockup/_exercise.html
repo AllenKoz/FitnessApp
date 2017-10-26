@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+
 		<title>About Me</title>
 		<div class = "float-right"><button><a class="btn btn-whatever float-right" href="index.html">Home</a></button></button></div>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-		<link rel="stylesheet" href="main.css">
+
 		
     </head>
     <style>
@@ -16,7 +16,7 @@
 		}
         </style>
 	<body>
-            <img src="\images\onemore.jpg"/>
+            <img src="images\onemore.jpg"/>
 		
 		<p>We help you keep track of your fitness!</p><br/><br/>
 		<div class="container">
@@ -27,21 +27,13 @@
 									<div class="card-header">
 										Choose which exercises you have done
 									</div>
-									<form action="/action_page.php">
-										<input type="checkbox" name="coffee" value="Jumping Jacks" id="checkbox">Jumping Jacks<br>
-										<input type="checkbox" name="coffee" value="Running" id="checkbox">Running<br>
-										<input type="checkbox" name="coffee" value="Weight Lifting" id="checkbox">Weight Lifting<br>
-										<input type="checkbox" name="coffee" value="Squat" id="checkbox">Squat<br>
-										<br>
-										<input type="button" onclick="makeCheckbox()" value="Send order">
-										<br><br>
-										<input type="text" id="order" size="50">
-										<input type="submit" value="Submit">
+									<form>
+
+										<input type="text" id="input1" />Other<br>
+										
+										<button onclick="myJsFunction()" id= "Submut">Submit</button>
 										</form>
-										
-									
-										
-									
+
 								</div>
 							</div>
 
@@ -50,12 +42,9 @@
 									<div class="card-header">
 										Exercises you have done
 									</div>
-									<form action="/action_page.php" method="get">
-										<input type="checkbox" name="Jumping Jacks" value="Bike">Jumping Jacks<br>
-										<input type="checkbox" name="Running" value="Car">Running<br>
-										<input type="checkbox" name="Weight Lifting" value="Car">Weight Lifting<br>
-										<input type="submit" value="Remove">
-									  </form>
+									<form>
+										<button onclick="myJsFunction()">Show exercises done</button>
+									</form>
 									
 										
 									
@@ -63,38 +52,30 @@
 							</div>
 	</div>
 	</div>
+	
+
+	
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-	<script>
-	function makeCheckbox() {
-    	var coffee = document.forms[0];
-    	var txt = "";
-    	var i;
-    	for (i = 0; i < coffee.length; i++) {
-        	if (coffee[i].checked) {
-            	txt = txt + coffee[i].value + " ";
-				
-        	}
-			if (inputs[i].type === "checkbox" && inputs[i].checked) {
-      			arr.push(inputs[i].value);
-				  document.getElementById("checkbox").disabled = true;
-   			}
+
+<script>
+
+	function myJsFunction(){
+		var exercises = [];
+		var x = document.getElementById("input1").value;
+		while(x !="Done"){
+			exercises.push(x);
+		}
+		exercises.sort();
+		console.log(exercises)
+		//for(var i=0; i<exercises.length; i++){   
+		//	console.log(exercises)
+		//}
 
 
-    	}
-    	document.getElementById("order").value = "You did these exercises: " + txt;
-
-		
 	}
-function disable() {
-    document.getElementById("checkbox").disabled = true;
-	}
-
-	function undisable() {
-    	document.getElementById("checkbox").disabled = false;
-	}
-</script>
+   </script>
 
 	</body>
 </html>
