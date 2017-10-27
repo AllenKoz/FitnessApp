@@ -4,20 +4,16 @@
 
 		<title>About Me</title>
 		<div class = "float-right"><button><a class="btn btn-whatever float-right" href="index.html">Home</a></button></button></div>
+		<div class = "float-right"><button><a class="btn btn-whatever float-right" href="Signinorregister.html">Signup/Register</a></button></button></div>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 		
     </head>
     <style>
-       
-		.loginContainer{
-			margin: 0 auto;
-			margin-top: 2em !important;
-		}
+
         </style>
-	<body>
-            <img src="images\onemore.jpg"/>
-		
+		<body background="images\onemore.jpg">
+
 		<p>We help you keep track of your fitness!</p><br/><br/>
 		<div class="container">
 			
@@ -25,16 +21,21 @@
 							<div class="col-md-6">
 								<div class="card" >
 									<div class="card-header">
-										Choose which exercises you have done
+										Which exercises you have done
 									</div>
 									<form>
-
-										<input type="text" id="input1" />Other<br>
+										Jumping Jacks<br><input type="text" id="input1" />How many?<br>
+										Sit ups<br><input type="text" id="input2" />How many?<br>
+										Running<br><input type="text" id="input3" />How many?<br>
+										Swimming<br><input type="text" id="input4" />How many?<br>
+										Rowing<br><input type="text" id="input5" />How many?<br>
+										Other<br><input type="text" id="input6" /><br>
+										<input type="text" id="input7" />How many?<br>
 										
-										<button onclick="myJsFunction()" id= "Submut">Submit</button>
-										</form>
 
+										</form>
 								</div>
+								<button onclick="myJsFunction()" id= "Submut">Submit</button>
 							</div>
 
 							<div class="col-md-6">
@@ -42,39 +43,17 @@
 									<div class="card-header">
 										Exercises you have done
 									</div>
-									<form>
-										<button onclick="myJsFunction()">Show exercises done</button>
+									<form id = "outputList">
 									</form>
-									
-										
-									
 								</div>
 							</div>
 	</div>
 	</div>
-	
 
-	
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-<script>
-	var exercises = [];
-	function myJsFunction(){
-
-		var x = document.getElementById("input1").value;
-			exercises.push(x);
-		
-		exercises.sort();
-		console.log(exercises)
-		//for(var i=0; i<exercises.length; i++){   
-		//	console.log(exercises)
-		//}
-
-
-	}
-   </script>
+	<script src ="list.js"></script>
 
 	</body>
 </html>
