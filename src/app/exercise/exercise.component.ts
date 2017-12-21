@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from "@angular/http";
 import { GameService } from '../modules/game.service';
 import { Router } from '@angular/router';
-import { ValueTransformer } from '@angular/compiler/src/util';
+
 
 @Component({
   selector: 'app-exercise',
   templateUrl: './exercise.component.html',
-  styleUrls: ['./exercise.component.scss']
+  styleUrls: ['./exercise.component.scss'],
+ 
 })
 
 export class ExerciseComponent implements OnInit {
@@ -31,20 +32,20 @@ export class ExerciseComponent implements OnInit {
         var p = [];
 
     
-        var x = document.getElementById("input6").value;
+        var x = document.getElementById("input6").dataset;
         exercises.push(x);
-        var y = document.getElementById("input7").value;
+        var y = document.getElementById("input7").dataset;
         number.push(y);
-        var o = document.getElementById("input1").value;
-        p.push("Jumping Jacks: " + document.getElementById("input1").value + "<br >"+ 
-        "Sit ups: " + document.getElementById("input2").value + "<br >"+
-        "Running: " + document.getElementById("input3").value + "<br >"+
-        "Swimming: " + document.getElementById("input4").value + "<br >"+
-        "Rowing: " + document.getElementById("input5").value + "<br >"+   
+        var o = document.getElementById("input1").dataset;
+        p.push("Jumping Jacks: " + document.getElementById("input1").dataset + "<br >"+ 
+        "Sit ups: " + document.getElementById("input2").dataset + "<br >"+
+        "Running: " + document.getElementById("input3").dataset + "<br >"+
+        "Swimming: " + document.getElementById("input4").dataset + "<br >"+
+        "Rowing: " + document.getElementById("input5").dataset + "<br >"+   
         x + " " + y + "<br >");
         console.log(p);
-        document.getElementById("outputList").innerHTML = p;
-
 }
+
   
 }
+
