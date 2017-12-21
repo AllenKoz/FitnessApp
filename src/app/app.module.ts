@@ -9,8 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 
 import { IndexComponent } from './index/index.component';
-
+import { GameService } from './modules/game.service';
 import { LoginComponent } from './login/login.component';
+import { ExerciseComponent } from './exercise/exercise.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 
     IndexComponent,
     LoginComponent,
+    ExerciseComponent,
 
   ],
   imports: [
@@ -30,10 +32,11 @@ import { LoginComponent } from './login/login.component';
 
         { path: "home", component: IndexComponent },
         { path: "login", component: LoginComponent },
+        { path: "exercise", component:ExerciseComponent },
         { path: "", pathMatch: "full", redirectTo: "/home" }
     ])
   ],
-
+  providers: [ GameService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

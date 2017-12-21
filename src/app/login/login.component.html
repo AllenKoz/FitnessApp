@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-	<head>
+<head>
 
 		<title>About Me</title>
-		<div class = "float-right"><button><a class="btn btn-whatever float-right" href="index.html">Home</a></button></button></div>
-		<div class = "float-right"><button><a class="btn btn-whatever float-right" href="_exercise.html">Exercises</a></button></button></div>
+		<!--<div class = "float-right"><button><a class="btn btn-whatever float-right" href="index.html">Home</a></button></div>-->
+		<!--<div class = "float-right"><button><a class="btn btn-whatever float-right" href="exercise.component.html">Exercises</a></button></div>-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		
 
@@ -14,7 +12,7 @@
        
 
         </style>
-	<body background="images\burncalories.jpg" >
+	<body background=".\assets\Images\burncalories.jpg" >
 		
 		<p>We help you keep track of your fitness!</p><br/><br/>
 		<div class="container">
@@ -37,6 +35,7 @@
 						<h4 class="card-title"></h4>
 						<p class="card-text">Sign in here</p>
 						<a href="#" class="btn btn-primary">Sign in</a>
+						<a class="btn btn-primary"  (click)="loginFB()">Log in with Facebook</a>
 					</div>
 				</div>
 				
@@ -74,4 +73,3 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 		
 	</body>
-</html>

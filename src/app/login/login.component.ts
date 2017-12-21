@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '../modules/game.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+    name:string;
+    password: string;
 
-  ngOnInit() {
-  }
+
+    constructor(private game: GameService, private router: Router) { }
+
+    ngOnInit() {
+    }
+
+    login(){
+        this.game.login(this.name, this.password)
+    }
+    loginFB(){
+        this.game.loginFB()
+    }
+
 
 }
